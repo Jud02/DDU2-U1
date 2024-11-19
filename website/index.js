@@ -14,3 +14,6 @@ function miniBox(cityName) {
 
     document.getElementById("cities").append(cityDiv);
 }
+for (let i = 0; i < cities.length; i++) {
+    miniBox(cities[i].name)
+}

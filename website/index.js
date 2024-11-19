@@ -7,3 +7,10 @@
 
 let cityName = prompt("Vilken stad?")
 
+function miniBox(cityName) {
+    const cityDiv = document.createElement("div");
+    cityDiv.classList.add("cityBox");
+    cityDiv.textContent = cityName; 
+
+    document.getElementById("cities").append(cityDiv);
+}

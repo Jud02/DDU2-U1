@@ -6,6 +6,7 @@
 
 
 let cityName = prompt("Vilken stad?")
+let cityFinder = prompt("Vilken stad?");
 
 function miniBox(cityName) {
     const cityDiv = document.createElement("div");

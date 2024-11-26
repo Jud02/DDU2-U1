@@ -114,4 +114,8 @@ function createTable() {
     }
 
     tabell.appendChild(namesRow);
+    for (let j = 0; j < cities.length; j++) {
+      const cell = document.createElement("div");
+      cell.classList.add("cell");
+    }
 createTable();

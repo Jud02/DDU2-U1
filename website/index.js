@@ -72,3 +72,13 @@ for (let i = 0; i < distances.length; i++) {
   }
 }
 
+if (closestCityIndex !== -1) {
+  const cityDi = document.querySelectorAll(".cityBox");
+  cityDi[closestCityIndex].classList.add("closest");
+  let divied = minDistance/10;
+
+  cityDi[closestCityIndex].textContent = `${cities[closestCityIndex].name} ${divied} mil bort` ;
+
+  document.getElementById("closest").textContent = `${cities[closestCityIndex].name}`;
+
+}

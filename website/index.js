@@ -83,4 +83,8 @@ if (closestCityIndex !== -1) {
 
 }
 function createTable() {
+  const tabell = document.querySelector("#table"); // Grid-layout
+  tabell.style.width = "100%";
+  const rows = cities.length;
+  const columns = cities.length + 1; // En extra för header-raden
 createTable();

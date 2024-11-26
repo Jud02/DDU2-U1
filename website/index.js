@@ -130,5 +130,19 @@ function createTable() {
           distanceValue = distance.distance;
         }
       }
+      if (distanceValue !== null) {
+        cell.textContent = distanceValue / 10;
+      } 
+
+      // Ändra bakgrundsfärg på jämna kolumner
+      if (j % 2 === 0) { // Kontrollera kolumnnummer
+        cell.style.backgroundColor = "rgb(243, 162, 209)"; // Ange valfri färg
+      }
+
+      if ((i + 1) % 2 === 0) {
+        cell.classList.add("even_row");
+      }
+
+      tabell.appendChild(cell);
     }
 createTable();

@@ -87,19 +87,19 @@ function createTable() {
   tabell.style.width = "100%";
   const rows = cities.length;
   const columns = cities.length + 1; // En extra för header-raden
+  const emptyCell = document.createElement ("div");
+  emptyCell.classList.add("cell");
+  emptyCell.classList.add("head_column");
+  emptyCell.textContent = "";
+  tabell.appendChild(emptyCell);
+
   // Header-rad
   for (let a = 0; a < columns; a++) {
-    const emptyCell = document.createElement("div");
-    emptyCell.classList.add("cell");
-    emptyCell.classList.add("head_column");
-
-    if (a === 0) {
-      emptyCell.textContent = ""; // Tom första cell
-    } else {
-      emptyCell.textContent = cities[a - 1].id; // Stadens ID
-    }
-
-    tabell.appendChild(emptyCell);
+    const idRow = document.createElement("div");
+    idRow.classList.add("cell");
+    idRow.classList.add("head_column");
+    idRow.textContent = cities[a].id; // Stadens ID
+    tabell.appendChild(idRow);
   }
   // Fyll i rader och celler
   for (let i = 0; i < rows; i++) {

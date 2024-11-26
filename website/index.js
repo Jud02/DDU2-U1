@@ -101,4 +101,17 @@ function createTable() {
 
     tabell.appendChild(emptyCell);
   }
+  // Fyll i rader och celler
+  for (let i = 0; i < rows; i++) {
+    let namesRow = document.createElement("div");
+    namesRow.textContent = cities[i].id + " - " + cities[i].name;
+    namesRow.classList.add("head_row");
+    namesRow.classList.add("cell");
+
+    // Lägg till klass för varannan tredje rad
+    if ((i + 1) % 2 === 0) {
+      namesRow.classList.add("even_row");
+    }
+
+    tabell.appendChild(namesRow);
 createTable();

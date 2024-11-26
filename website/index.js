@@ -58,3 +58,17 @@ if (farthestCityIndex !== -1) {
   document.getElementById("furthest").textContent = `${cities[farthestCityIndex].name}`; 
 
 }
+//närmast
+let minDistance = Infinity;
+let closestCityIndex = -1;
+
+for (let i = 0; i < distances.length; i++) {
+  if (cityFinder === cities[distances[i].city1].name || cityFinder === cities[distances[i].city2].name) {
+      let closestCity = (cityFinder === cities[distances[i].city1].name) ? distances[i].city2 : distances[i].city1;
+      if (distances[i].distance < minDistance) {
+          minDistance = distances[i].distance;
+          closestCityIndex = closestCity;
+      }
+  }
+}
+

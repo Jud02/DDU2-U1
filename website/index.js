@@ -33,3 +33,17 @@ if (!cityFound) {
   document.querySelector("title").textContent = `Not found`;
   document.querySelector("h3").textContent = null;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 }
+//Längst
+let maxDistance = 0;
+let farthestCityIndex = -1;
+
+for (let i = 0; i < distances.length; i++) {
+  if (cityFinder === cities[distances[i].city1].name || cityFinder === cities[distances[i].city2].name) {
+      let farthestCity = (cityFinder === cities[distances[i].city1].name) ? distances[i].city2 : distances[i].city1;
+      if (distances[i].distance > maxDistance) {
+          maxDistance = distances[i].distance;
+          farthestCityIndex = farthestCity;
+      }
+  }
+}
+

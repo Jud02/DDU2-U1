@@ -82,3 +82,5 @@ if (closestCityIndex !== -1) {
   document.getElementById("closest").textContent = `${cities[closestCityIndex].name}`;
 
 }
+function createTable() {
+createTable();

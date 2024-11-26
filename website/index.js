@@ -28,4 +28,8 @@ for (let i = 0; i < cities.length; i++) {
 }
 for (let i = 0; i < cities.length; i++) {
     miniBox(cities[i].name)
+if (!cityFound) {
+  document.querySelector("h2").textContent = `${cityFinder} finns inte i databasen.`;
+  document.querySelector("title").textContent = `Not found`;
+  document.querySelector("h3").textContent = null;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 }

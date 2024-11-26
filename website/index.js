@@ -87,4 +87,18 @@ function createTable() {
   tabell.style.width = "100%";
   const rows = cities.length;
   const columns = cities.length + 1; // En extra för header-raden
+  // Header-rad
+  for (let a = 0; a < columns; a++) {
+    const emptyCell = document.createElement("div");
+    emptyCell.classList.add("cell");
+    emptyCell.classList.add("head_column");
+
+    if (a === 0) {
+      emptyCell.textContent = ""; // Tom första cell
+    } else {
+      emptyCell.textContent = cities[a - 1].id; // Stadens ID
+    }
+
+    tabell.appendChild(emptyCell);
+  }
 createTable();

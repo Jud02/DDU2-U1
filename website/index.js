@@ -47,3 +47,14 @@ for (let i = 0; i < distances.length; i++) {
   }
 }
 
+if (farthestCityIndex !== -1) {
+  const cityDi = document.querySelectorAll(".cityBox");
+  cityDi[farthestCityIndex].classList.add("furthest");
+  let divied = maxDistance/10;
+
+
+  cityDi[farthestCityIndex].textContent = `${cities[farthestCityIndex].name} ${divied} mil bort`;
+
+  document.getElementById("furthest").textContent = `${cities[farthestCityIndex].name}`; 
+
+}
